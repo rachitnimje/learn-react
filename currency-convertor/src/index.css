@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.greenGradient {
+    @apply bg-gradient-to-r from-purple-400 via-green-500 to-indigo-400;
+}
