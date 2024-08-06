@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function useCurrencyInfo(currency) {
   const [data, setData] = useState({});
-  const url = `https://v6.exchangerate-api.com/v6/7826daba40c4fc6803b2b080/latest/${currency}`;
+  let url = `${import.meta.env.VITE_CURRENCY_API_URL}/${currency}`;
 
   useEffect(() => {
     fetch(url)
@@ -17,7 +17,6 @@ function useCurrencyInfo(currency) {
 }
 
 export default useCurrencyInfo;
-
 
 // ----------------------------------------------------------------------------------------------------------------------------
 
@@ -43,4 +42,3 @@ export default useCurrencyInfo;
 // }
 
 // export default useCurrencyInfo;
-

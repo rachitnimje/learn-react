@@ -13,7 +13,6 @@ function App() {
   const currencyList = conversionRates.conversion_rates
     ? Object.keys(conversionRates.conversion_rates)
     : [];
-  //console.log(currencyList);
 
   const swap = () => {
     let temp = fromCurrency;
@@ -44,14 +43,6 @@ function App() {
           onCurrencyChange={(currency) => setFromCurrency(currency)}
           selectedCurrency={fromCurrency}
         />
-        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-1 bg-white flex justify-center items-center">
-          <button
-            className="bg-blue-900 text-white text-lg rounded-lg p-1 m-1 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            onClick={swap}
-          >
-            swap
-          </button>
-        </div> */}
         <div className="relative w-full h-0.5">
           <button
             type="button"
